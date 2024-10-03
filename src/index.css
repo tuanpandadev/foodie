@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:wght@100; 200;300;400;500; 600;700; 800&display=swap");
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+/* SKELETON */
+.skeleton {
+  background-color: var(--background-container);
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0),
+    var(--primary-color),
+    rgba(0, 0, 0, 0)
+  );
+  background-size: 20px 100%;
+  background-repeat: no-repeat;
+  background-position: left -40% top 0;
+  animation: shine 1.3s ease infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.section-container {
+  @apply max-w-screen-2xl container mx-auto xl:px-24 px-4;
+}
+
+.subtitle {
+  @apply text-red uppercase tracking-wide font-medium text-lg;
+}
+
+.title {
+  @apply text-4xl md:text-5xl font-bold my-2 leading-snug;
+}
+
+.heart-star {
+  border-radius: 0px 28px 0px 28px;
+}
+
+button,
+a:hover {
+  @apply hover:!border hover:!border-gray-800;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
