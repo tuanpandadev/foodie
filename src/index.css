@@ -81,3 +81,9 @@ a:hover {
 *::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+button:focus,
+a:focus,
+select:focus {
+  outline: none !important;
+}

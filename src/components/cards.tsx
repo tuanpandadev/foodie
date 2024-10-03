@@ -2,15 +2,10 @@ import { useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import { Product } from "@/types";
+
 interface CardProps {
-  item: {
-    id: string;
-    name: string;
-    image: string;
-    description: string;
-    price: number;
-    category: string;
-  };
+  item: Product;
 }
 
 export function Cards({ item }: CardProps) {
@@ -30,7 +25,7 @@ export function Cards({ item }: CardProps) {
       >
         <FaHeart className="size-5" />
       </div>
-      <Link to={`/menu/${item.id}`}>
+      <Link className="hover:border-none" to={`/menu/${item.id}`}>
         <figure>
           <img
             src={item.image}
@@ -40,7 +35,7 @@ export function Cards({ item }: CardProps) {
         </figure>
       </Link>
       <div className="card-body">
-        <Link to={`/menu/${item.id}`}>
+        <Link className="hover:border-none" to={`/menu/${item.id}`}>
           <h2 className="card-title">{item.name}!</h2>
         </Link>
         <p>Description of the item</p>

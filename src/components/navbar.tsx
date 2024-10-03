@@ -23,20 +23,28 @@ export function Navbar() {
   const navItems = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link className="hover:!border-none" to="/">
+          Home
+        </Link>
       </li>
       <li tabIndex={0}>
         <details>
           <summary>Menu</summary>
           <ul className="p-2">
             <li>
-              <a>All</a>
+              <Link className="hover:!border-none" to="/menu">
+                All
+              </Link>
             </li>
             <li>
-              <a>Salad</a>
+              <Link to="/menu" className="hover:!border-none">
+                Salad
+              </Link>
             </li>
             <li>
-              <a>Pizza</a>
+              <Link to="/menu" className="hover:!border-none">
+                Pizza
+              </Link>
             </li>
           </ul>
         </details>
@@ -46,19 +54,27 @@ export function Navbar() {
           <summary>Services</summary>
           <ul className="p-2 min-w-40">
             <li>
-              <a>Online Order</a>
+              <Link to={"/"} className="hover:!border-none">
+                Online Order
+              </Link>
             </li>
             <li>
-              <a>Table Booking</a>
+              <Link to={"/"} className="hover:!border-none">
+                Table Booking
+              </Link>
             </li>
             <li>
-              <a>Order Tracking</a>
+              <Link to={"/"} className="hover:!border-none">
+                Order Tracking
+              </Link>
             </li>
           </ul>
         </details>
       </li>
       <li>
-        <a>Offers</a>
+        <Link to={"/"} className="hover:!border-none">
+          Offers
+        </Link>
       </li>
     </>
   );
@@ -167,10 +183,13 @@ export function Navbar() {
             </div>
           </div>
           {/* contact */}
-          <a className="btn bg-green text-white rounded-full px-6 flex items-center gap-2 transition">
+          <Link
+            to="/contact"
+            className="btn bg-green text-white rounded-full px-6 flex items-center gap-2 transition"
+          >
             <BiPhoneCall />
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </header>
