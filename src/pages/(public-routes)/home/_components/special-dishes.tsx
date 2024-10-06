@@ -2,22 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import Slider, { Settings, ResponsiveObject } from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
+import { Product } from "@/types";
+
 import { Cards } from "@/components/cards";
 
-import { SamplePrevArrow } from "./sample-prev-arrow";
 import { SampleNextArrow } from "./sample-next-arrow";
-
-interface SpecialDishesDataProps {
-  id: string;
-  name: string;
-  image: string;
-  description: string;
-  price: number;
-  category: string;
-}
+import { SamplePrevArrow } from "./sample-prev-arrow";
 
 export function SpecialDishes() {
-  const [recipes, setRecipes] = useState<SpecialDishesDataProps[]>([]);
+  const [recipes, setRecipes] = useState<Product[]>([]);
   const [canNext, setCanNext] = useState(true);
   const [canPrev, setCanPrev] = useState(false);
   const slider = useRef<Slider>(null);

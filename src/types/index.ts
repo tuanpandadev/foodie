@@ -1,4 +1,4 @@
-type Product = {
+export type Product = {
   id: string;
   name: string;
   image: string;
@@ -10,4 +10,4 @@ type Product = {
   countInStock: number;
 };
 
-export { type Product };
+export type Variant = "LOGIN" | "REGISTER";

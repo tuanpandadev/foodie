@@ -12,7 +12,7 @@ enum Category {
   DRINKS = "drinks"
 }
 
-export default function Menu() {
+export default function MenuPage() {
   const [itemsPerPage] = useState(9);
 
   const [menus, setMenus] = useState<Product[]>([]);
@@ -28,7 +28,6 @@ export default function Menu() {
       try {
         const response = await fetch("/menu.json");
         const data = await response.json();
-        console.log(data);
 
         setMenus(data);
         setFilteredItems(data);
